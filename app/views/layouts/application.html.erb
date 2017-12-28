@@ -6,18 +6,35 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
    <!-- Compiled and minified CSS -->
+  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
 
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+
    <!--아이콘-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">       
+  <script src="custom.js"></script>
+  <script>$('.carousel.carousel-slider').carousel({fullWidth: true});</script>
 </head>
 <body>
-<%= render 'home/nav' %>
-<div >
-<%= yield %>
-</div>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="home" class="brand-logo"><i class="material-icons">cloud</i>KMU</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="home"><i class="material-icons">홈</i></i></a></li>
+        <li><a href="lecture_legister"><i class="material-icons">강의등록</i></a></li>
+        <li><a href="lecture_list"><i class="material-icons">강의보기</i></a></li>
+        <li><a href="my_page"><i class="material-icons">account_circle</i></a></li>
+        <li><a href="mobile.html"><i class="large material-icons">arrow_drop_down</i></a></li>
+      </ul>
+    </div>
+  </nav>
+  <div >
+   <%= yield %>
+  </div>
 </body>
 </html>
